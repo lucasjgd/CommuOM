@@ -1,0 +1,155 @@
+/* === STYLES GÉNÉRAUX === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #ececec;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+header img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #3b6e99;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  background: #ececec;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* === PAGE ACCUEIL (index.html) === */
+.welcome {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.welcome h1 {
+  font-size: 20px;
+  color: #3b6e99;
+}
+
+.welcome h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #3b6e99;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #4f85ad;
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 10px;
+}
+
+.card .category {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.card .title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* === PAGE FORUMS (forum.html) === */
+.forums {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.forums h1 {
+  font-size: 22px;
+  color: #3b6e99;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.category-card {
+  background-color: #4f85ad;
+  color: white;
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.category-card .content {
+  padding: 15px;
+}
+
+.category-card h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.category-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
