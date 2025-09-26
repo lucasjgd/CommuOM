@@ -15,7 +15,7 @@
           <label for="password_login">Mot de passe</label>
           <input type="password" id="password_login" name="password" required>
 
-          <button type="submit">Se connecter</button>
+          <button type="submit" class = "btn">Se connecter</button>
         </form>
       </div>
 
@@ -35,7 +35,7 @@
           <label for="password_register_confirm">Confirmation du mot de passe</label>
           <input type="password" id="password_register_confirm" name="password_confirm" required>
 
-          <button type="submit">S'inscrire</button>
+          <button type="submit" class = "btn">S'inscrire</button>
         </form>
       </div>
     </div>

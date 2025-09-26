@@ -1,50 +1,80 @@
-<?php
-session_start();
-include("config.php"); // connexion à la BDD
-
-// Récupérer les 4 derniers posts avec le pseudo de l'utilisateur et le nom de la catégorie
-$query = "
-    SELECT p.post_id, p.titre, p.message, p.image, p.date_post, u.pseudo, c.libelle AS categorie
-    FROM post p
-    JOIN utilisateurs u ON p.utilisateur_id = u.utilisateur_id
-    JOIN categorie c ON p.categorie_id = c.categorie_id
-    ORDER BY p.date_post DESC
-    LIMIT 4
-";
-$result = mysqli_query($link, $query);
-?>
-
+<?php session_start(); ?>
 <?php include 'head.html'; ?>
 <?php include 'header.php'; ?>
 
-<section class="welcome">
-    <h1>Bienvenue sur CommuOM ! Forum dédié aux fans de l’OM 💪</h1>
-    <h2>Les derniers posts :</h2>
-</section>
-
-<section class="cards">
-    <?php
-    if ($result && mysqli_num_rows($result) > 0) {
-        while ($post = mysqli_fetch_assoc($result)) {
-            echo '<div class="post-card">';
-            
-            if (!empty($post['image'])) {
-                echo '<img src="'.htmlspecialchars($post['image']).'" alt="'.htmlspecialchars($post['titre']).'">';
-            }
-
-            echo '<div class="post-content">
-                    <div class="category">'.htmlspecialchars($post['categorie']).'</div>
-                    <h3>'.htmlspecialchars($post['titre']).'</h3>
-                    <p>'.nl2br(htmlspecialchars($post['message'])).'</p>
-                    <small>Posté le '.date("d/m/Y H:i", strtotime($post['date_post'])).' - par '.htmlspecialchars($post['pseudo']).'</small>
-                  </div>
-                </div>';
-        }
-    } else {
-        echo "<p>Aucun post récent disponible.</p>";
-    }
-    ?>
+<section class="welcome-page">
+  <div class="welcome-content">
+    <h1>Bienvenue sur CommuOM ! 💙</h1>
+    <p>Le forum dédié aux fans de l’OM. Partagez vos idées, vos analyses et vos émotions avec la communauté !</p>
+    <div class="welcome-images">
+      <div class="image-card">
+        <img src="./public/assets/images/VieOM.png" alt="Vie de l'OM">
+        <h3>Vie de l'OM</h3>
+      </div>
+      <div class="image-card">
+        <img src="./public/assets/images/MercatOM.png" alt="Mercato">
+        <h3>Mercato</h3>
+      </div>
+      <div class="image-card">
+        <img src="./public/assets/images/MatchOM.png" alt="Matchs">
+        <h3>Matchs</h3>
+      </div>
+    </div>
+    <a href="forum.php" class="btn btn-primary">Rejoindre la discussion</a>
+  </div>
 </section>
 
 <?php include 'footer.html'; ?>
 
+<style>
+.welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content h1 {
+    font-size: 2.5rem;
+    color: #3b6e99;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #3b6e99;
+}
+
+.welcome-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.image-card {
+    background: #ffffffbb;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-card h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #3b6e99;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
