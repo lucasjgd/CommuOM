@@ -1,4 +1,5 @@
 {
+    "name": "joagand/commuom",   
     "require": {
         "phpmailer/phpmailer": "^6.10"
     }

@@ -1,28 +1,28 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'joagand/commuom',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '40f3e84231492d7114642dfd018cb5c03bf0f564',
+        'reference' => '91a61dd8bd332933d747cf85b06d56948ca35b1f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'joagand/commuom' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '40f3e84231492d7114642dfd018cb5c03bf0f564',
+            'reference' => '91a61dd8bd332933d747cf85b06d56948ca35b1f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(
-            'pretty_version' => 'v6.10.0',
-            'version' => '6.10.0.0',
-            'reference' => 'bf74d75a1fde6beaa34a0ddae2ec5fce0f72a144',
+            'pretty_version' => 'v6.12.0',
+            'version' => '6.12.0.0',
+            'reference' => 'd1ac35d784bf9f5e61b424901d5a014967f15b12',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
             'aliases' => array(),
