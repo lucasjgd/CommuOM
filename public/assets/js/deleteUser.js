@@ -8,7 +8,7 @@ document.querySelectorAll('.delete-user').forEach(btn => {
         let userId = this.dataset.id;
 
         // Send POST request to delete user API / Envoyer une requête POST à l'API de suppression d'utilisateur
-        fetch("/api/deleteUtilisateur.php", {
+        fetch("/api/deleteUser.php", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: "id=" + userId

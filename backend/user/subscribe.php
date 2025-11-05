@@ -48,7 +48,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Prepare welcome email / Préparer le mail de bienvenue
         $sujet = "Bienvenue sur notre site !";
 
-        
+        $messageHtml = '
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bienvenue sur CommuOM</title>
+</head>
+<body style="margin:0; padding:0; font-family: Arial, sans-serif; background-color:#f4f4f4;">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; margin:20px auto; border-radius:8px; overflow:hidden; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+          <tr>
+            <td style="padding:30px; color:#3b6e99;">
+              <h1 style="color:#3b6e99; text-align:center;">CommuOM</h1>
+              <h2 style="color:#333; text-align:center;">Bienvenue ' . $pseudo . ' !</h2>
+              <p style="font-size:16px; line-height:1.6; text-align:center; color: #333;">
+                Merci de vous être inscrit sur notre site ! <br>
+                Nous sommes ravis de vous accueillir dans la communauté !
+              </p>
+              <p style="text-align:center; margin-top:30px;">
+                <a href="https://joagand.alwaysdata.net//authentification.php" 
+                   style="display:inline-block; padding:12px 25px; background-color:#3b6e99; color:#ffffff; text-decoration:none; border-radius:5px; font-weight:bold;">
+                  Se connecter
+                </a>
+              </p>
+            </td>
+          </tr>
+          <tr style="background-color:#3b6e99; text-align:center;">
+            <td style="padding:15px; font-size:12px; color:#fff;">
+              &copy; ' . date("Y") . ' CommuOM. Tous droits réservés.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+';
 
         $messageAlt = "Bienvenue $pseudo ! Merci de vous être inscrit sur notre site. Connectez-vous ici : https://joagand.alwaysdata.net//authentification.php";
 
