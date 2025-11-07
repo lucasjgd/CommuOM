@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $resetLink = "https://joagand.alwaysdata.net/resetPassword.php?mail=" . urlencode($email);
 
         // Define mail subject / Définir le sujet du mail
-        $subject = "Réinitialisation de votre mot de passe";
+        $subject = "Reinitialisation de votre mot de passe";
 
         // Build HTML email body / Construire le corps HTML de l'email
         $bodyHtml = '
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Réinitialisation de votre mot de passe</title>
+<title>Reinitialisation de votre mot de passe</title>
 </head>
 <body style="margin:0; padding:0; font-family: Arial, sans-serif; background-color:#f4f4f4;">
   <table width="100%" cellpadding="0" cellspacing="0">
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </a>
               </p>
               <p style="font-size:14px; color:#666; text-align:center; margin-top:20px;">
-                 ⚠️ Si vous n\'êtes pas à l\'origine de cette demande, ignorez simplement cet e-mail.
+                Si vous n\'êtes pas à l\'origine de cette demande, ignorez simplement cet e-mail.
               </p>
             </td>
           </tr>
