@@ -6,7 +6,7 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
 
 ## Lucas JOGAND
 
-# Prompt
+## Prompt
 1. **Mise en place d’un système de suppression (AJAX + PHP)**  
    > “Comment implémenter un système de suppression d’éléments en utilisant AJAX côté front-end et un traitement en PHP côté back-end ?”
 
@@ -17,7 +17,7 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
    > “Comment installer, configurer et utiliser PHPMailer pour permettre l’envoi de mails depuis une application PHP ?”
 
 
-# Ressources utilisées
+## Ressources utilisées
 - Documentation officielle de **PHPDoc** : [https://manual.phpdoc.org/](https://manual.phpdoc.org/)  
 - Tutoriel vidéo pour **PHPMailer** : [https://www.youtube.com/watch?v=Yxr3otAWYVo](https://www.youtube.com/watch?v=Yxr3otAWYVo)
 
