@@ -1,4 +1,43 @@
 <?php
+
+/**
+ * Handle user registration process
+ * / Gère le processus d’inscription des utilisateurs
+ *
+ * This script:
+ * - Processes only POST requests
+ * - Retrieves and sanitizes form inputs (pseudo, email, password)
+ * - Checks for required fields and password confirmation
+ * - Verifies if the email is already registered
+ * - Hashes the password and inserts the new user into the database
+ * - Sends a welcome email using PHPMailer
+ * - Redirects to the authentication page after successful registration
+ *
+ * / Ce script :
+ * - Traite uniquement les requêtes POST
+ * - Récupère et nettoie les données du formulaire (pseudo, email, mot de passe)
+ * - Vérifie la complétude des champs et la correspondance des mots de passe
+ * - Vérifie si l’adresse e-mail est déjà utilisée
+ * - Hash le mot de passe et insère le nouvel utilisateur dans la base de données
+ * - Envoie un mail de bienvenue avec PHPMailer
+ * - Redirige vers la page d’authentification après inscription réussie
+ *
+ * Expected POST parameters / Paramètres POST attendus :
+ * @param string $_POST['pseudo']            Username / Pseudo de l’utilisateur
+ * @param string $_POST['email']             User email / Adresse e-mail
+ * @param string $_POST['password']          Password / Mot de passe
+ * @param string $_POST['password_confirm']  Password confirmation / Confirmation du mot de passe
+ *
+ * Email sent / Mail envoyé :
+ * - Subject / Sujet : “Bienvenue sur notre site !”
+ * - Body / Contenu : Message HTML et texte alternatif (avec lien vers la page de connexion)
+ *
+ * Redirection :
+ * - On success → authentification.php / En cas de succès → authentification.php
+ *
+ * @return void Redirects or displays an error message / Redirige ou affiche un message d’erreur
+ */
+
 // Include database configuration and mailer script / Inclure la configuration de la base de données et le script d'envoi de mail
 require __DIR__ . '/../../config/config.php';
 require __DIR__ . '/../mail/mailer.php';

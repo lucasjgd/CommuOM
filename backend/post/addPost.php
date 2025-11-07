@@ -1,7 +1,40 @@
 <?php
+
+/**
+ * Handle the creation of a new forum post (AJAX endpoint)
+ * / Gère la création d’un nouveau post sur le forum (point d’accès AJAX)
+ *
+ * This script:
+ * - Checks if the user is logged in via the session
+ * - Retrieves and validates form data (title, message)
+ * - Inserts the post into the database
+ * - Returns a JSON response indicating success or error
+ *
+ * / Ce script :
+ * - Vérifie si l'utilisateur est connecté via la session
+ * - Récupère et valide les données du formulaire (titre, message)
+ * - Insère le post dans la base de données
+ * - Retourne une réponse JSON indiquant le succès ou l'erreur
+ *
+ * Expected POST parameters / Paramètres POST attendus :
+ * @param string $_POST['titre']   Post title / Titre du post
+ * @param string $_POST['message'] Post content / Contenu du post
+ *
+ * Session variables used / Variables de session utilisées :
+ * @param int    $_SESSION['utilisateur_id'] ID of the logged-in user / ID de l’utilisateur connecté
+ * @param string $_SESSION['pseudo']         Pseudo of the logged-in user / Pseudo de l’utilisateur connecté
+ *
+ * JSON Response / Réponse JSON :
+ * - success (bool) : true on success, false otherwise / true si succès, false sinon
+ * - message (string) : status or error message / message de statut ou d’erreur
+ * - post (array, optional) : contains the new post’s data / contient les données du nouveau post
+ *
+ * @return void Outputs a JSON response directly / Retourne directement une réponse JSON
+ */
+
+
 session_start(); // Start session / Démarrer la session
 include("../../config/config.php"); // Include database connection / Inclure la connexion à la base de données
-
 header('Content-Type: application/json'); // Set response type to JSON / Définir le type de réponse en JSON
 
 // Check if user is logged in / Vérifier si l'utilisateur est connecté

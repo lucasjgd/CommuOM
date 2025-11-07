@@ -1,4 +1,33 @@
 <?php
+
+/**
+ * Handle the deletion of a forum post (AJAX endpoint)
+ * / Gère la suppression d’un post sur le forum (point d’accès AJAX)
+ *
+ * This script:
+ * - Checks if the user session is active
+ * - Verifies that a post ID has been provided
+ * - Checks if the post exists in the database
+ * - Deletes the post if found
+ * - Returns a JSON response indicating success or error
+ *
+ * / Ce script :
+ * - Vérifie si la session utilisateur est active
+ * - Vérifie qu’un identifiant de post a été transmis
+ * - Vérifie si le post existe dans la base de données
+ * - Supprime le post s’il est trouvé
+ * - Retourne une réponse JSON indiquant le succès ou l’erreur
+ *
+ * Expected POST parameters / Paramètres POST attendus :
+ * @param int $_POST['id'] Post ID to delete / ID du post à supprimer
+ *
+ * JSON Response / Réponse JSON :
+ * - success (bool) : true if deletion was successful / true si la suppression a réussi
+ * - message (string) : status or error message / message de statut ou d’erreur
+ *
+ * @return void Outputs a JSON response directly / Retourne directement une réponse JSON
+ */
+
 session_start(); // Start session / Démarrer la session
 header('Content-Type: application/json'); // Set response type to JSON / Définir le type de réponse en JSON
 include("../../config/config.php"); // Include database connection / Inclure la connexion à la base de données

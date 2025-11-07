@@ -1,4 +1,33 @@
 <?php
+
+/**
+ * Handle the deletion of a user (AJAX endpoint)
+ * / Gère la suppression d’un utilisateur (point d’accès AJAX)
+ *
+ * This script:
+ * - Checks if a user ID has been provided
+ * - Verifies if the user still has posts in the database
+ * - Prevents deletion if posts exist
+ * - Deletes the user if no posts are found
+ * - Returns a JSON response indicating success or error
+ *
+ * / Ce script :
+ * - Vérifie si un identifiant d’utilisateur a été transmis
+ * - Vérifie si l’utilisateur possède encore des posts dans la base de données
+ * - Empêche la suppression si des posts existent
+ * - Supprime l’utilisateur s’il n’a plus de posts
+ * - Retourne une réponse JSON indiquant le succès ou l’erreur
+ *
+ * Expected POST parameters / Paramètres POST attendus :
+ * @param int $_POST['id'] User ID to delete / ID de l’utilisateur à supprimer
+ *
+ * JSON Response / Réponse JSON :
+ * - success (bool) : true if deletion was successful / true si la suppression a réussi
+ * - message (string) : status or error message / message de statut ou d’erreur
+ *
+ * @return void Outputs a JSON response directly / Retourne directement une réponse JSON
+ */
+
 session_start(); // Start session / Démarrer la session
 header('Content-Type: application/json'); // Set response type to JSON / Définir le type de réponse en JSON
 include("../../config/config.php"); // Include database connection / Inclure la connexion à la base de données
