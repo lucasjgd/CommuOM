@@ -42,4 +42,19 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
 3. **Modification formulaire CursorIA intégré à l'IDE**
    > "modifie le formulaire pour qu'il fonctionne correctement"
 
+------------------------------------------------------
+
+## Valentin SIGNORET 
+
+## Prompt 
+1. **Création de la page Forum**
+   > "Comment afficher les publications enregistrées depuis une base de données en PHP."
+
+2. **Ajout ou suppression dynamique d’un post (AJAX)**
+   > "Mettre en place la création d’un nouveau post, sans recharger la page grâce à AJAX."
+   > "Comment mettre en place la suppression d'un post via AJAX, sans rechargement de la page."
+
+3. **Mise en place d’une logique de mot de passe en PHP**
+   > "Comment mettre en place un système de vérification et de hachage de mot de passe en PHP ?"
+
 
