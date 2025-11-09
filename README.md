@@ -43,3 +43,28 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
    > "modifie le formulaire pour qu'il fonctionne correctement"
 
 
+------------------------------------------------------
+
+## Valentin Sigonret
+
+## Prompt 
+1) Création de la page forum ChatGPT
+
+"Crée-moi une page forum en PHP avec affichage des posts depuis une base de données."
+
+"Ajoute la possibilité d’ajouter un post dynamiquement via AJAX sans recharger la page."
+
+"Permets aussi la suppression d’un post via AJAX."
+
+2) Implémentation du système d’authentification
+
+"Réalise un système d’inscription et de connexion avec mot de passe chiffré."
+
+"Ajoute une fonction de réinitialisation de mot de passe par e-mail."
+
+3) Améliorations du forum ChatGPT
+
+"Fais apparaître les nouveaux posts instantanément après envoi du formulaire."
+
+"Affiche un message de confirmation lors de l’ajout ou la suppression d’un post."
+
