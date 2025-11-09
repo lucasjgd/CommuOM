@@ -42,5 +42,4 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
 3. **Modification formulaire CursorIA intégré à l'IDE**
    > "modifie le formulaire pour qu'il fonctionne correctement"
 
-## Ressources utilisées
-- Tutoriel vidéo pour la **gestion de Tokens** : (https://www.youtube.com/watch?v=ExZFV5QC9Ug) 
+
