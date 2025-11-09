@@ -20,6 +20,7 @@ Ce dépôt contient la liste des prompts réalisés et des ressources utilisées
 ## Ressources utilisées
 - Documentation officielle de **PHPDoc** : [https://manual.phpdoc.org/](https://manual.phpdoc.org/)  
 - Tutoriel vidéo pour **PHPMailer** : [https://www.youtube.com/watch?v=Yxr3otAWYVo](https://www.youtube.com/watch?v=Yxr3otAWYVo)
+- Exemple FORUM : [https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf](https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf)
 
 ------------------------------------------------------
 
